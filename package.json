@@ -1,0 +1,21 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "vite": "^7.3.1"
+    },
+    "dependencies": {
+        "@phosphor-icons/web": "^2.1.2",
+        "@tailwindcss/vite": "^4.1.18",
+        "@vitejs/plugin-vue": "^6.0.4",
+        "autoprefixer": "^10.4.20",
+        "postcss": "^8.4.49",
+        "tailwindcss": "^4.1.18",
+        "vue": "^3.5.27",
+        "vue-router": "^4.3.3"
+    }
+}

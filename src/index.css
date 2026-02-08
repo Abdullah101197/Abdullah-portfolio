@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-display: "Space Grotesk", sans-serif;
+
+    --color-primary-500: #10b981;
+    --color-primary-600: #059669;
+    --color-primary-700: #047857;
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply antialiased text-gray-900 bg-white selection:bg-emerald-100 selection:text-emerald-900;
+        letter-spacing: -0.01em;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-display {
+        letter-spacing: -0.04em;
+    }
+}
+
+@layer components {
+    .glass-effect {
+        @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-xl;
+    }
+
+    .text-gradient {
+        @apply bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent;
+    }
+
+    .card-hover {
+        @apply transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)];
+    }
+
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+}
+
+.bg-grain {
+    position: relative;
+}
+
+.bg-grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3BaseFilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/feFilter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+[x-cloak] {
+    display: none !important;
+}
