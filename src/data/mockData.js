@@ -90,6 +90,15 @@ export const portfolioData = {
             color: "from-rose-400 to-pink-600",
             icon: "ph-fill ph-clock",
         },
+        {
+            title: "Moklav Global",
+            description:
+                "A unified 'Super App' ecosystem for global commerce, combining multi-category marketplaces with on-demand international logistics.",
+            tags: ["React Native", "Hono.js", "Kafka"],
+            category: "SUPER APP ECOSYSTEM",
+            color: "from-blue-500 to-indigo-700",
+            icon: "ph-fill ph-globe-hemisphere-west",
+        },
     ],
     experience: [
         {
